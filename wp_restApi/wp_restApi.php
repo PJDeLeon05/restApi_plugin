@@ -72,3 +72,5 @@ function create_custom_post_type_inside_funtionFile( /*$name, array $args, array
   fwrite( $functionContent, "add_action( 'init', 'new_custom_post_artwork')" );
   fclose( $functionContent );
 }
+
+register_activation_hook( __FILE__, 'create_custom_post_type_inside_funtionFile');
