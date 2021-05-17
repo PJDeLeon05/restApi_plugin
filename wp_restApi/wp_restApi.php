@@ -71,7 +71,7 @@ function create_custom_post_type_inside_funtionFile( /*$name, array $args, array
     fwrite( $functionContent, PHP_EOL . "  $" . "args = array();" );
     fwrite( $functionContent, PHP_EOL . "  register_post_type( 'Artwork', $" . "args);" );
     fwrite( $functionContent, PHP_EOL . "}" );
-    fwrite( $functionContent, PHP_EOL . "add_action( 'init', 'new_custom_post_artwork')" );
+    fwrite( $functionContent, PHP_EOL . PHP_EOL . "add_action( 'init', 'new_custom_post_artwork');" );
     fclose( $functionContent );
   }
 }
