@@ -1,9 +1,9 @@
 <?php
 /*
-*   Plugin Name : Rest Api Plugin
-*   Description : A simple plugin for Wordpress Rest Api Requests
-*   Version     : 1.0.0
-*   Author      : Patrick James O. De leon
+*   Plugin Name: Rest Api Plugin
+*   Description: A simple plugin for Wordpress Rest Api Requests
+*   Version: 1.0.0
+*   Author: Patrick James O. De leon
 */
 
 // Check if php is accessed with / on wordpress
