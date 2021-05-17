@@ -65,12 +65,15 @@ function create_custom_post_type_inside_funtionFile( /*$name, array $args, array
   foreach($texts_to_appendLast as $item) { $text_to_append.array_push($item); } */
 
   //Adding Custom Type script to functions.php of the active theme
-  fwrite( $functionContent, PHP_EOL . "function new_custom_post_artwork() {" );
-  fwrite( $functionContent, "  $args = array();" );
-  fwrite( $functionContent, "  register_post_type( 'Artwork', $args);" );
-  fwrite( $functionContent, "}" . PHP_EOL );
-  fwrite( $functionContent, "add_action( 'init', 'new_custom_post_artwork')" );
-  fclose( $functionContent );
+  if ( !function_exists( 'new_custom_post_artwork' ))
+  {
+    fwrite( $functionContent, PHP_EOL . "function new_custom_post_artwork() {" );
+    fwrite( $functionContent, PHP_EOL . "  $" . "args = array();" );
+    fwrite( $functionContent, PHP_EOL . "  register_post_type( 'Artwork', $" . "args);" );
+    fwrite( $functionContent, PHP_EOL . "}" );
+    fwrite( $functionContent, PHP_EOL . "add_action( 'init', 'new_custom_post_artwork')" );
+    fclose( $functionContent );
+  }
 }
 
 register_activation_hook( __FILE__, 'create_custom_post_type_inside_funtionFile');
