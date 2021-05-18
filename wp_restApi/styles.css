@@ -1,0 +1,50 @@
+<!--Styles for Katana Page--!>
+.pjd-div-table{
+  max-width: 1200px;
+  height: auto;
+}
+
+.pjd-div-1, .pjd-div-2, .pjd-div-3{
+  max-height: 400px;
+  width: auto;
+}
+
+.pjd-div-11, .pjd-div-12, .pjd-div-21, .pjd-div-22, .pjd-div-31, .pjd-div-32{
+  float: left;
+}
+
+.pjd-div-11{
+  background-color: Red;
+}
+
+.pjd-div-12{
+
+}
+
+.pjd-div-13{
+
+}
+
+.pjd-div-21{
+
+}
+
+.pjd-div-22{
+
+}
+
+.pjd-div-23{
+
+}
+
+.pjd-div-31{
+
+}
+
+.pjd-div-32{
+
+}
+
+.pjd-div-33{
+
+}

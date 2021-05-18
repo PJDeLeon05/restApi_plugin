@@ -30,3 +30,9 @@ register_activation_hook( __FILE__, 'wp_get_api' );
 // Execute katana_page_template when in page named katana
 // and its url is <base>/katana
 add_filter( 'page_template', 'katana_page_template' );
+
+// Add the styles.css
+function add_style_file(){
+  wp_enqueue_style( 'pjd-katana-style', plugin_dir_path( __FILE__ ) . '/styles.css' );
+}
+add_action ('wp_enqueue_scripts', 'add_style_file');
