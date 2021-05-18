@@ -12,14 +12,21 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-//Rest Api Get
-function wp_get_api()
-{
-  $getRequest = XML
-}
-
 //php file for creating Custom Post Type
-include('make_cpt.php');
+include( 'make_cpt.php' );
+
+//php file for Get Api
+include( 'get-api.php' );
+
+// php file for custom-page-template
+include( 'page-template-filter.php' );
 
 // Execute create_custom_post_type_inside_funtionFile when plugin activate
 register_activation_hook( __FILE__, 'create_custom_post_type_inside_funtionFile' );
+
+// Execute wp_get_api when plugin is activated
+register_activation_hook( __FILE__, 'wp_get_api' );
+
+// Execute katana_page_template when in page named katana
+// and its url is <base>/katana
+add_filter( 'page_template', 'katana_page_template' );
