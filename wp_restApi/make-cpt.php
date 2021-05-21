@@ -60,8 +60,14 @@ function create_custom_post_type_inside_funtionFile( /*$name, array $args, array
   {
     fwrite( $functionContent, PHP_EOL . "function pjd_register_new_post_type() {" );
     fwrite( $functionContent, PHP_EOL . "  $" . "args = array(" );
-    fwrite( $functionContent, PHP_EOL . "     'label'                => __( 'Artwork', 'restApi-plugin' )," );
-    fwrite( $functionContent, PHP_EOL . "     'has_archive'          => true," );
+    fwrite( $functionContent, PHP_EOL . "     'label'                => array(" );
+	fwrite( $functionContent, PHP_EOL . "										'name' => 'Artwork'," );
+	fwrite( $functionContent, PHP_EOL . "										'add_new_item' => 'Add New Artwork'," );
+	fwrite( $functionContent, PHP_EOL . "										'edit_item' => 'Edit Artwork'," );
+	fwrite( $functionContent, PHP_EOL . "										'all_items' => 'All Artwork'," );
+	fwrite( $functionContent, PHP_EOL . "										'singular_name' => 'Artwork'" );
+	fwrite( $functionContent, PHP_EOL . "									  )," );
+	fwrite( $functionContent, PHP_EOL . "     'has_archive'          => true," );
     fwrite( $functionContent, PHP_EOL . "     'public'               => true," );
     fwrite( $functionContent, PHP_EOL . "     'hierarchical'         => false," );
     fwrite( $functionContent, PHP_EOL . "     'show_in_rest'         => true," );

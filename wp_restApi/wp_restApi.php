@@ -13,10 +13,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 //php file for creating Custom Post Type
-include( 'make_cpt.php' );
+include( 'make-cpt.php' );
 
-//php file for Get Api
-include( 'get-api.php' );
+//php file for Get and Post API
+include( 'request-api.php' );
 
 // php file for custom-page-template
 include( 'page-template-filter.php' );
@@ -24,8 +24,11 @@ include( 'page-template-filter.php' );
 // Execute create_custom_post_type_inside_funtionFile when plugin activate
 register_activation_hook( __FILE__, 'create_custom_post_type_inside_funtionFile' );
 
-// Execute wp_get_api when plugin is activated
-register_activation_hook( __FILE__, 'wp_get_api' );
+// Add custom route for get and post api
+add_action ( 'rest_api_init', 'register_new_APIroute');
+
+// Add custom rest field
+add_action ( 'rest_api_init', 'wp_register_rest_field' );
 
 // Execute katana_page_template when in page named katana
 // and its url is <base>/katana
@@ -33,6 +36,6 @@ add_filter( 'page_template', 'katana_page_template' );
 
 // Add the styles.css
 function add_style_file(){
-  wp_enqueue_style( 'pjd-katana-style', plugin_dir_path( __FILE__ ) . '/styles.css' );
+  wp_enqueue_style( 'pjd-katana-style', plugin_dir_url( __FILE__ ) . '/styles.css' );
 }
 add_action ('wp_enqueue_scripts', 'add_style_file');

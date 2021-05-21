@@ -5,28 +5,28 @@
 
 get_header();?>
 <div class="pjd-div-table">
-  <div class="pjd-div-1">
-    <div class="pjd-div-11">
+  <div class="pjd-div-row1">
+    <div class="pjd-div-row1-col1">
     </div>
-    <div class="pjd-div-12">
+    <div class="pjd-div-row1-col2">
     </div>
-    <div class="pjd-div-13">
-    </div>
-  </div>
-  <div class="pjd-div-2">
-    <div class="pjd-div-21">
-    </div>
-    <div class="pjd-div-22">
-    </div>
-    <div class="pjd-div-23">
+    <div class="pjd-div-row1-col3">
     </div>
   </div>
-  <div class="pjd-div-3">
-    <div class="pjd-div-31">
+  <div class="pjd-div-row2">
+    <div class="pjd-div-row2-col1">
     </div>
-    <div class="pjd-div-32">
+    <div class="pjd-div-row2-col2">
     </div>
-    <div class="pjd-div-33">
+    <div class="pjd-div-row2-col3">
+    </div>
+  </div>
+  <div class="pjd-div-row3">
+    <div class="pjd-div-row3-col1">
+    </div>
+    <div class="pjd-div-row3-col2">
+    </div>
+    <div class="pjd-div-row3-col3">
     </div>
   </div>
 </div>

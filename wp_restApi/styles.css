@@ -1,50 +1,40 @@
-<!--Styles for Katana Page--!>
 .pjd-div-table{
   max-width: 1200px;
-  height: auto;
+  height: 1200px;
+  border: 1px solid;
+  display: block;
+  background-color: black;
 }
 
-.pjd-div-1, .pjd-div-2, .pjd-div-3{
-  max-height: 400px;
-  width: auto;
+div.pjd-div-table > div{
+	border: 1px solid darkblue;
+	width: 100%;
+	height: 33.33%;
+	background-color: #001433;
 }
 
-.pjd-div-11, .pjd-div-12, .pjd-div-21, .pjd-div-22, .pjd-div-31, .pjd-div-32{
-  float: left;
+div.pjd-div-table > div > div{
+	float: left;
+	border: 1px solid;
+	width: 33.33%;
+	height: 100%;
 }
 
-.pjd-div-11{
-  background-color: Red;
+.pjd-div-row1 > div, .pjd-div-row3 > div{
+	background-color: #67c7b0;
 }
 
-.pjd-div-12{
-
+.pjd-div-row2 > div{
+	background-color: #89c7b8;
 }
 
-.pjd-div-13{
 
+div.pjd-div-table > div > div:hover{
+	transition: background-color 0.3s ease;
+	background-color: #4df5f7;
+	cursor: pointer;
 }
 
-.pjd-div-21{
-
-}
-
-.pjd-div-22{
-
-}
-
-.pjd-div-23{
-
-}
-
-.pjd-div-31{
-
-}
-
-.pjd-div-32{
-
-}
-
-.pjd-div-33{
-
+div.pjd-div-table > div > div:active{
+	background-color: #2a579c;
 }
